@@ -2,7 +2,6 @@ import React from "react";
 import { ScrollView, SafeAreaView } from "react-native";
 import styled from "styled-components";
 import Card from "./components/Card";
-import { Ionicons } from "@expo/vector-icons";
 import { NotificationIcon } from "./components/Icons";
 import Logo from "./components/Logo";
 import Course from "./components/Course";
