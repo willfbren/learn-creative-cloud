@@ -5,7 +5,7 @@ import {
     TouchableOpacity,
     Animated,
     Easing,
-    StatusBar,
+    StatusBar
 } from "react-native";
 import styled from "styled-components";
 import Card from "../components/Card";
@@ -24,15 +24,19 @@ function mapDispatchToProps(dispatch) {
     return {
         openMenu: () =>
             dispatch({
-                type: "OPEN_MENU",
-            }),
+                type: "OPEN_MENU"
+            })
     };
 }
 
 class HomeScreen extends React.Component {
+    static navigationOptions = {
+        headerShown: false
+    };
+
     state = {
         scale: new Animated.Value(1),
-        opacity: new Animated.Value(1),
+        opacity: new Animated.Value(1)
     };
 
     componentDidMount() {
@@ -48,10 +52,10 @@ class HomeScreen extends React.Component {
             Animated.timing(this.state.scale, {
                 toValue: 0.9,
                 duration: 300,
-                easing: Easing.in(),
+                easing: Easing.in()
             }).start();
             Animated.spring(this.state.opacity, {
-                toValue: 0.5,
+                toValue: 0.5
             }).start();
 
             StatusBar.setBarStyle("light-content", true);
@@ -61,10 +65,10 @@ class HomeScreen extends React.Component {
             Animated.spring(this.state.scale, {
                 toValue: 1,
                 duration: 300,
-                easing: Easing.in(),
+                easing: Easing.in()
             }).start();
             Animated.spring(this.state.opacity, {
-                toValue: 1,
+                toValue: 1
             }).start();
 
             StatusBar.setBarStyle("dark-content", true);
@@ -78,7 +82,7 @@ class HomeScreen extends React.Component {
                 <AnimatedContainer
                     style={{
                         transform: [{ scale: this.state.scale }],
-                        opacity: this.state.opacity,
+                        opacity: this.state.opacity
                     }}
                 >
                     <SafeAreaView>
@@ -89,7 +93,7 @@ class HomeScreen extends React.Component {
                                     style={{
                                         position: "absolute",
                                         top: 0,
-                                        left: 20,
+                                        left: 20
                                     }}
                                 >
                                     <Avatar />
@@ -100,7 +104,7 @@ class HomeScreen extends React.Component {
                                     style={{
                                         position: "absolute",
                                         right: 20,
-                                        top: 5,
+                                        top: 5
                                     }}
                                 />
                             </TitleBar>
@@ -109,7 +113,7 @@ class HomeScreen extends React.Component {
                                     flexDirection: "row",
                                     padding: 20,
                                     paddingLeft: 12,
-                                    paddingTop: 30,
+                                    paddingTop: 30
                                 }}
                                 horizontal={true}
                                 showsHorizontalScrollIndicator={false}
@@ -129,14 +133,22 @@ class HomeScreen extends React.Component {
                                 showsHorizontalScrollIndicator={false}
                             >
                                 {cards.map((card, index) => (
-                                    <Card
+                                    <TouchableOpacity
                                         key={index}
-                                        title={card.title}
-                                        image={card.image}
-                                        caption={card.caption}
-                                        logo={card.logo}
-                                        subtitle={card.subtitle}
-                                    />
+                                        onPress={() => {
+                                            this.props.navigation.push(
+                                                "Section"
+                                            );
+                                        }}
+                                    >
+                                        <Card
+                                            title={card.title}
+                                            image={card.image}
+                                            caption={card.caption}
+                                            logo={card.logo}
+                                            subtitle={card.subtitle}
+                                        />
+                                    </TouchableOpacity>
                                 ))}
                             </ScrollView>
                             <Subtitle>Popular Courses</Subtitle>
@@ -179,7 +191,8 @@ const Subtitle = styled.Text`
 const Container = styled.View`
     background: #f0f3f5;
     flex: 1;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 `;
 
 const AnimatedContainer = Animated.createAnimatedComponent(Container);
@@ -205,28 +218,28 @@ const Name = styled.Text`
 const logos = [
     {
         image: require("../assets/logo-framerx.png"),
-        text: "Framer X",
+        text: "Framer X"
     },
     {
         image: require("../assets/logo-figma.png"),
-        text: "Figma",
+        text: "Figma"
     },
     {
         image: require("../assets/logo-studio.png"),
-        text: "Studio",
+        text: "Studio"
     },
     {
         image: require("../assets/logo-react.png"),
-        text: "React",
+        text: "React"
     },
     {
         image: require("../assets/logo-swift.png"),
-        text: "Swift",
+        text: "Swift"
     },
     {
         image: require("../assets/logo-sketch.png"),
-        text: "Sketch",
-    },
+        text: "Sketch"
+    }
 ];
 
 const cards = [
@@ -235,29 +248,29 @@ const cards = [
         image: require("../assets/background11.jpg"),
         subtitle: "React Native",
         caption: "1 of 12 sections",
-        logo: require("../assets/logo-react.png"),
+        logo: require("../assets/logo-react.png")
     },
     {
         title: "Styled Components",
         image: require("../assets/background12.jpg"),
         subtitle: "React Native",
         caption: "2 of 12 sections",
-        logo: require("../assets/logo-react.png"),
+        logo: require("../assets/logo-react.png")
     },
     {
         title: "Props and Icons",
         image: require("../assets/background13.jpg"),
         subtitle: "React Native",
         caption: "3 of 12 sections",
-        logo: require("../assets/logo-react.png"),
+        logo: require("../assets/logo-react.png")
     },
     {
         title: "Static Data and Loop",
         image: require("../assets/background14.jpg"),
         subtitle: "React Native",
         caption: "4 of 12 sections",
-        logo: require("../assets/logo-react.png"),
-    },
+        logo: require("../assets/logo-react.png")
+    }
 ];
 
 const courses = [
@@ -268,7 +281,7 @@ const courses = [
         logo: require("../assets/logo-studio.png"),
         author: "Meng To",
         avatar: require("../assets/avatar.jpg"),
-        caption: "Design and interactive prototype",
+        caption: "Design and interactive prototype"
     },
     {
         title: "React for Designers",
@@ -277,7 +290,7 @@ const courses = [
         logo: require("../assets/logo-react.png"),
         author: "Meng To",
         avatar: require("../assets/avatar.jpg"),
-        caption: "Learn to design and code a React site",
+        caption: "Learn to design and code a React site"
     },
     {
         title: "Design and Code with Framer X",
@@ -286,7 +299,7 @@ const courses = [
         logo: require("../assets/logo-framerx.png"),
         author: "Meng To",
         avatar: require("../assets/avatar.jpg"),
-        caption: "Create powerful design and code components for your app",
+        caption: "Create powerful design and code components for your app"
     },
     {
         title: "Design System in Figma",
@@ -296,6 +309,6 @@ const courses = [
         author: "Meng To",
         avatar: require("../assets/avatar.jpg"),
         caption:
-            "Complete guide to designing a site using a collaborative design tool",
-    },
+            "Complete guide to designing a site using a collaborative design tool"
+    }
 ];
