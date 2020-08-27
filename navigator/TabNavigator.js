@@ -30,11 +30,7 @@ HomeStack.navigationOptions = ({ navigation }) => {
         tabBarVisible,
         tabBarLabel: "Home",
         tabBarIcon: ({ focused }) => (
-            <Ionicons
-                name="ios-home"
-                size={26}
-                color={focused ? activeColor : inactiveColor}
-            />
+            <Ionicons name="ios-home" size={26} color={focused ? activeColor : inactiveColor} />
         )
     };
 };
@@ -46,11 +42,7 @@ const CoursesStack = createStackNavigator({
 CoursesStack.navigationOptions = {
     tabBarLabel: "Courses",
     tabBarIcon: ({ focused }) => (
-        <Ionicons
-            name="ios-albums"
-            size={26}
-            color={focused ? activeColor : inactiveColor}
-        />
+        <Ionicons name="ios-albums" size={26} color={focused ? activeColor : inactiveColor} />
     )
 };
 
@@ -61,18 +53,14 @@ const ProjectsStack = createStackNavigator({
 ProjectsStack.navigationOptions = {
     tabBarLabel: "Projects",
     tabBarIcon: ({ focused }) => (
-        <Ionicons
-            name="ios-folder"
-            size={26}
-            color={focused ? activeColor : inactiveColor}
-        />
+        <Ionicons name="ios-folder" size={26} color={focused ? activeColor : inactiveColor} />
     )
 };
 
 const TabNavigator = createBottomTabNavigator({
+    ProjectsStack,
     HomeStack,
-    CoursesStack,
-    ProjectsStack
+    CoursesStack
 });
 
 export default TabNavigator;
