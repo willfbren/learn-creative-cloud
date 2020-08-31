@@ -7,7 +7,28 @@ import {
     StatusBar,
     TouchableOpacity
 } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
+import { connect } from "react-redux";
+
+function mapStateToProps(state) {
+    return {
+        action: state.action
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        openCard: () =>
+            dispatch({
+                type: "OPEN_CARD"
+            }),
+        closeCard: () =>
+            dispatch({
+                type: "CLOSE_CARD"
+            })
+    };
+}
 
 const screenWidth = Dimensions.get("window").width;
 const screenHeight = Dimensions.get("window").height;
@@ -18,25 +39,32 @@ class Project extends React.Component {
         cardWidth: new Animated.Value(315),
         cardHeight: new Animated.Value(460),
         titleTop: new Animated.Value(20),
-        opacity: new Animated.Value(0)
+        opacity: new Animated.Value(0),
+        textHeight: new Animated.Value(100)
     };
 
     openCard = () => {
+        if (!this.props.canOpen) return;
+
         Animated.spring(this.state.cardWidth, { toValue: screenWidth }).start();
         Animated.spring(this.state.cardHeight, { toValue: screenHeight - tabBarHeight }).start();
         Animated.spring(this.state.titleTop, { toValue: 40 }).start();
-        Animated.timing(this.state.opacity, { toValue: 1 }).start()
+        Animated.timing(this.state.opacity, { toValue: 1 }).start();
+        Animated.spring(this.state.textHeight, { toValue: 1000 }).start();
 
         StatusBar.setHidden(true);
+        this.props.openCard();
     };
 
     closeCard = () => {
         Animated.spring(this.state.cardWidth, { toValue: 315 }).start();
         Animated.spring(this.state.cardHeight, { toValue: 460 }).start();
         Animated.spring(this.state.titleTop, { toValue: 20 }).start();
-        Animated.timing(this.state.opacity, { toValue: 0 }).start()
+        Animated.timing(this.state.opacity, { toValue: 0 }).start();
+        Animated.spring(this.state.textHeight, { toValue: 100 }).start();
 
         StatusBar.setHidden(false);
+        this.props.closeCard();
     };
 
     render() {
@@ -52,7 +80,18 @@ class Project extends React.Component {
                         </AnimatedTitle>
                         <Author>by {this.props.author}</Author>
                     </Cover>
-                    <Text>{this.props.text}</Text>
+                    <AnimatedText style={{ height: this.state.textHeight }}>
+                        {this.props.text}
+                    </AnimatedText>
+                    <AnimatedLinearGradient
+                        colors={["rgba(255,255,255, 0)", "rgba(255,255,255, 1)"]}
+                        style={{
+                            position: "absolute",
+                            top: 330,
+                            width: "100%",
+                            height: this.state.textHeight
+                        }}
+                    />
                     <TouchableOpacity
                         style={{ position: "absolute", top: 20, right: 20 }}
                         onPress={this.closeCard}
@@ -67,7 +106,9 @@ class Project extends React.Component {
     }
 }
 
-export default Project;
+export default connect(mapStateToProps, mapDispatchToProps)(Project);
+
+const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
 
 const CloseView = styled.View`
     width: 32;
@@ -130,3 +171,5 @@ const Text = styled.Text`
     line-height: 24px;
     color: #3c4560;
 `;
+
+const AnimatedText = Animated.createAnimatedComponent(Text);
