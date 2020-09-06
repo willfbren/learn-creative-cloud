@@ -6,7 +6,8 @@ import {
     Keyboard,
     Alert,
     Animated,
-    Dimensions
+    Dimensions,
+    AsyncStorage
 } from "react-native";
 import { BlurView } from "expo-blur";
 import Success from "./Success";
@@ -22,7 +23,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        closeLogin: () => dispatch({ type: "CLOSE_LOGIN" })
+        closeLogin: () => dispatch({ type: "CLOSE_LOGIN" }),
+        updateName: name => dispatch({ type: "UPDATE_NAME", name })
     };
 }
 
@@ -38,6 +40,10 @@ class ModalLogin extends React.Component {
         scale: new Animated.Value(1.3),
         translateY: new Animated.Value(0)
     };
+
+    componentDidMount() {
+        this.retrieveName();
+    }
 
     componentDidUpdate() {
         if (this.props.action === "openLogin") {
@@ -55,6 +61,21 @@ class ModalLogin extends React.Component {
             Animated.timing(this.state.translateY, { toValue: 1000, duration: 500 }).start();
         }
     }
+
+    storeName = async name => {
+        try {
+            await AsyncStorage.setItem("name", name);
+        } catch (error) {}
+    };
+
+    retrieveName = async () => {
+        try {
+            const name = await AsyncStorage.getItem("name");
+            if (name !== null) {
+                this.props.updateName(name);
+            }
+        } catch (error) {}
+    };
 
     handleLogin = () => {
         console.log(this.state.email, this.state.password);
@@ -79,6 +100,9 @@ class ModalLogin extends React.Component {
                     this.setState({ isSuccessful: true });
 
                     Alert.alert("Congrats", "You've logged in successfully!");
+
+                    this.storeName(response.user.email);
+                    this.props.updateName(response.user.email);
 
                     setTimeout(() => {
                         this.props.closeLogin();
