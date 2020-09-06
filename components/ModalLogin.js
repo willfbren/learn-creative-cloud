@@ -12,6 +12,7 @@ import { BlurView } from "expo-blur";
 import Success from "./Success";
 import Loading from "./Loading";
 import { connect } from "react-redux";
+import firebase from "./Firebase";
 
 const screenHeight = Dimensions.get("window").height;
 
@@ -60,17 +61,31 @@ class ModalLogin extends React.Component {
 
         this.setState({ isLoading: true });
 
-        setTimeout(() => {
-            this.setState({ isLoading: false });
-            this.setState({ isSuccessful: true });
+        const email = this.state.email;
+        const password = this.state.password;
 
-            Alert.alert("Congrats", "You've logged in successfully!");
+        firebase
+            .auth()
+            .signInWithEmailAndPassword(email, password)
+            .catch(function (error) {
+                Alert.alert("Error", error.message);
+            })
+            .then(response => {
+                console.log(response);
 
-            setTimeout(() => {
-                this.props.closeLogin();
-                this.setState({ isSuccessful: false });
-            }, 1000);
-        }, 2000);
+                this.setState({ isLoading: false });
+
+                if (response) {
+                    this.setState({ isSuccessful: true });
+
+                    Alert.alert("Congrats", "You've logged in successfully!");
+
+                    setTimeout(() => {
+                        this.props.closeLogin();
+                        this.setState({ isSuccessful: false });
+                    }, 1000);
+                }
+            });
     };
 
     focusEmail = () => {
