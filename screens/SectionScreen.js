@@ -92,7 +92,7 @@ class SectionScreen extends React.Component {
 export default SectionScreen;
 
 const markdown = `
-## The basic composition of the Adobe XD interface
+## Document Setup
 
 [Adobe XD](https://www.adobe.com/products/xd.html) uses a super easy and efficient interface, a style that it inherits from the companion application in the [Creative Cloud](https://www.adobe.com/creativecloud.html) package. It provides prototyping tools for different platforms, including websites, mobile phones, tablets, and more.
 

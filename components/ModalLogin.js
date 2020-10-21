@@ -101,7 +101,7 @@ class ModalLogin extends React.Component {
                 if (response) {
                     this.setState({ isSuccessful: true });
 
-                    Alert.alert("Congrats", "You've logged in successfully!");
+                    // Alert.alert("Congrats", "You've logged in successfully!");
 
                     // this.storeName(response.user.email);
                     this.fetchUser();
@@ -172,7 +172,7 @@ class ModalLogin extends React.Component {
                         ]
                     }}
                 >
-                    <Logo source={require("../assets/logo-dc.png")} />
+                    <Logo source={require("../assets/logo-cc.png")} />
                     <Text>Start Learning. Access Pro Content.</Text>
                     <TextInput
                         onChangeText={email => this.setState({ email })}

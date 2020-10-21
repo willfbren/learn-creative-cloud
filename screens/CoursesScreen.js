@@ -15,14 +15,14 @@ class CoursesScreen extends React.Component {
             <Container>
                 <ScrollView>
                     <Hero>
-                        <Background source={require("../assets/background12.jpg")} />
+                        <Background source={require("../assets/background5.jpg")} />
                         <LinearGradient
                             colors={["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.5)"]}
                             style={{ position: "absolute", width: screenWidth, height: 460 }}
                         />
-                        <Logo source={require("../assets/logo-react.png")} />
+                        <Logo source={require("../assets/logo-xd.png")} />
                         <Caption>12 Sections</Caption>
-                        <Title>React Native for Designers</Title>
+                        <Title>Adobe XD</Title>
                         <Sections>
                             <SectionScrollView
                                 horizontal={true}
@@ -40,7 +40,7 @@ class CoursesScreen extends React.Component {
                         </Sections>
                         <Author>
                             <Avatar source={require("../assets/avatar.jpg")} />
-                            <Name>Taught by Meng To</Name>
+                            <Name>Taught by John Doe</Name>
                         </Author>
                     </Hero>
                     <Subtitle>Latest Courses</Subtitle>
@@ -69,7 +69,7 @@ const Hero = styled.View`
 
 const Background = styled.Image`
     position: absolute;
-    top: 0;
+    top: -1;
     left: 0;
     width: ${screenWidth};
     height: 460px;
@@ -139,28 +139,28 @@ const Subtitle = styled.Text`
 
 const sections = [
     {
-        title: "React Native for Designers",
+        title: "Add and Edit Artboards",
         progress: 0.2,
-        image: require("../assets/background1.jpg")
+        image: require("../assets/background9.jpg")
     },
     {
-        title: "Styled Components",
+        title: "Create Interactive Prototypes",
         progress: 0.3,
-        image: require("../assets/background2.jpg")
+        image: require("../assets/background9.jpg")
     },
     {
-        title: "Assets, Icons and SVG",
+        title: "Creating UI Kits",
         progress: 0.9,
-        image: require("../assets/background3.jpg")
+        image: require("../assets/background9.jpg")
     },
     {
-        title: "Props and Data",
+        title: "Share Prototypes for Review",
         progress: 0.5,
-        image: require("../assets/background4.jpg")
+        image: require("../assets/background9.jpg")
     },
     {
-        title: "States and Layout Animation",
+        title: "Exporting Assets for Developers",
         progress: 0.1,
-        image: require("../assets/background6.jpg")
+        image: require("../assets/background9.jpg")
     }
 ];

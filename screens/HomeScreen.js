@@ -194,7 +194,7 @@ class HomeScreen extends React.Component {
                                         // console.log(data.cardsCollection.items);
                                         return (
                                             <CardsContainer>
-                                                {data.cardsCollection.items.map((card, index) => (
+                                                {cards.map((card, index) => (
                                                     <TouchableOpacity
                                                         key={index}
                                                         onPress={() => {
@@ -332,70 +332,70 @@ const logos = [
 
 const cards = [
     {
-        title: "React Native for Designers",
-        image: require("../assets/background11.jpg"),
-        subtitle: "React Native",
+        title: "Introduction to Adobe XD",
+        image: require("../assets/background2.jpg"),
+        subtitle: "Adobe XD",
         caption: "1 of 12 sections",
-        logo: require("../assets/logo-react.png")
+        logo: require("../assets/logo-xd.png")
     },
     {
-        title: "Styled Components",
-        image: require("../assets/background12.jpg"),
-        subtitle: "React Native",
+        title: "Interface Basics",
+        image: require("../assets/background3.jpg"),
+        subtitle: "Adobe XD",
         caption: "2 of 12 sections",
-        logo: require("../assets/logo-react.png")
+        logo: require("../assets/logo-xd.png")
     },
     {
-        title: "Props and Icons",
-        image: require("../assets/background13.jpg"),
-        subtitle: "React Native",
+        title: "Layout and Layers",
+        image: require("../assets/background5.jpg"),
+        subtitle: "Adobe XD",
         caption: "3 of 12 sections",
-        logo: require("../assets/logo-react.png")
+        logo: require("../assets/logo-xd.png")
     },
     {
-        title: "Static Data and Loop",
-        image: require("../assets/background14.jpg"),
-        subtitle: "React Native",
+        title: "Animation and Interaction",
+        image: require("../assets/background6.jpg"),
+        subtitle: "Adobe XD",
         caption: "4 of 12 sections",
-        logo: require("../assets/logo-react.png")
+        logo: require("../assets/logo-xd.png")
     }
 ];
 
 const courses = [
     {
-        title: "Prototype in InVision Studio",
+        title: "Image Transformation in Photoshop",
         subtitle: "10 sections",
         image: require("../assets/background13.jpg"),
-        logo: require("../assets/logo-studio.png"),
-        author: "Meng To",
+        logo: require("../assets/logo-ps.png"),
+        author: "John Doe",
         avatar: require("../assets/avatar.jpg"),
-        caption: "Design and interactive prototype"
+        caption: "Transform and enhance your images"
     },
     {
-        title: "React for Designers",
+        title: "Vector Icons in Illustrator",
         subtitle: "12 sections",
-        image: require("../assets/background11.jpg"),
-        logo: require("../assets/logo-react.png"),
-        author: "Meng To",
-        avatar: require("../assets/avatar.jpg"),
-        caption: "Learn to design and code a React site"
-    },
-    {
-        title: "Design and Code with Framer X",
-        subtitle: "10 sections",
         image: require("../assets/background14.jpg"),
-        logo: require("../assets/logo-framerx.png"),
-        author: "Meng To",
+        logo: require("../assets/logo-ai.png"),
+        author: "John Doe",
         avatar: require("../assets/avatar.jpg"),
-        caption: "Create powerful design and code components for your app"
+        caption: "Build a beautiful icon set from scratch"
     },
     {
-        title: "Design System in Figma",
+        title: "Editorial Design with InDesign",
         subtitle: "10 sections",
-        image: require("../assets/background6.jpg"),
-        logo: require("../assets/logo-figma.png"),
-        author: "Meng To",
+        image: require("../assets/background15.jpg"),
+        logo: require("../assets/logo-id.png"),
+        author: "John Doe",
         avatar: require("../assets/avatar.jpg"),
-        caption: "Complete guide to designing a site using a collaborative design tool"
+        caption: "Layout and design for print"
+    },
+    {
+        title: "Animations with After Effects",
+        subtitle: "10 sections",
+        image: require("../assets/background16.jpg"),
+        logo: require("../assets/logo-ae.png"),
+        author: "John Doe",
+        avatar: require("../assets/avatar.jpg"),
+        caption: "Bring life and excitement to your designs"
     }
 ];

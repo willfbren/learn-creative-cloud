@@ -209,30 +209,34 @@ const Text = styled.Text`
 
 const items = [
     {
-        logo: "https://cl.ly/a4d00a918f39/download/logo-vue.png",
-        title: "Vue.js for Designers",
+        logo: "https://www.photoshop.com/images/apps/photoshop.png",
+        title: "Adobe Photoshop",
         text:
-            "Make a dashboard web-app with a complete login system, dark mode, and animated charts for your data.",
+            "The creative power of Photoshop is on your iPad. Open full-size PSDs, retouch images, create sophisticated composites, and control brushes with your finger or Apple Pencil.",
         date: "23 Jan"
     },
     {
-        logo: "https://cl.ly/5c470805a500/download/logo-invision.png",
-        title: "InVision Studio",
+        logo:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/493px-Adobe_Illustrator_CC_icon.svg.png",
+        title: "Adobe Illustrator",
         text:
-            "Learn how to prototype interactions directly in the design tool in this 10-section course.",
+            "Create everything from gorgeous web and mobile graphics to logos, icons, book illustrations, product packaging, and billboards.",
         date: "27 Nov"
     },
     {
-        logo: "https://cl.ly/cc8368bef551/download/logo-framerx.png",
-        title: "Framer X",
-        text: "Create production-ready React components right in the design tool.",
+        logo:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Adobe_After_Effects_CC_icon.svg/1200px-Adobe_After_Effects_CC_icon.svg.png",
+        title: "Adobe After Effects",
+        text:
+            "With Adobe After Effects, the industry-standard motion graphics and visual effects software, you can take any idea and make it move.",
         date: "26 SEP"
     },
     {
-        logo: "https://cl.ly/c01bb29804bd/download/logo-figma.png",
-        title: "Design System",
+        logo:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/1051px-Adobe_XD_CC_icon.svg.png",
+        title: "Adobe XD",
         text:
-            "Complete guide to designing a site using a collaborative and powerful design system.",
+            "Adobe XD is your UI/UX design solution for website and mobile app creation. Design, prototype, and share.",
         date: "4 SEP"
     }
 ];
