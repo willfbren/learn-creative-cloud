@@ -77,8 +77,8 @@ class SectionScreen extends React.Component {
                         }}
                         /> */}
                         <Markdown
-                            body={section.content}
-                            pureCSS={htmlStyles}
+                            markdown={markdown}
+                            css={css}
                             scalesPageToFit={false}
                             scrollEnabled={false}
                         />
@@ -91,64 +91,54 @@ class SectionScreen extends React.Component {
 
 export default SectionScreen;
 
-const htmlContent = `
-    <h2>This is a title</h2>
-    <p>This <strong>is</strong> a <a href="http://google.com">link</a></p>
-    <img src="https://cl.ly/8861f359ed6d/download/Wave14.jpg" />
+const markdown = `
+## The basic composition of the Adobe XD interface
+
+[Adobe XD](https://www.adobe.com/products/xd.html) uses a super easy and efficient interface, a style that it inherits from the companion application in the [Creative Cloud](https://www.adobe.com/creativecloud.html) package. It provides prototyping tools for different platforms, including websites, mobile phones, tablets, and more.
+
+![Start New Design](https://file.mockplus.com/image/2018/12/b0da4790-e6d9-4e1c-a83c-257ffc339f5d.jpg)
+
+When launching the app, the welcome page provides different standard screen size templates and adds the file size you set yourself. In addition, the welcome page contains a number of resources; these resources can be used as a starting point for learning this application, as well as UI design elements such as iOS and Android mobile devices.In addition, other online resources are available, such as tutorials.
 `;
 
-const htmlStyles = `
-        * {
-            font-family: -apple-system, Roboto; 
-            margin: 0;
-            padding: 0;
-            font-size: 17px; 
-            font-weight: normal; 
-            color: #3c4560;
-            line-height: 24px;
-        }
+const css = `
+* {
+    font-family: -apple-system, Roboto; 
+    margin: 0;
+    padding: 0;
+    font-size: 17px; 
+    font-weight: normal; 
+    color: #3c4560;
+    line-height: 24px;
+}
 
-        h2 {
-            font-size: 20px;
-            text-transform: uppercase;
-            color: #b8bece;
-            font-weight: 600;
-            margin-top: 50px;
-        }
+h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #b8bece;
+    font-weight: 600;
+    margin-top: 50px;
+}
 
-        p {
-            margin-top: 20px;
-        }
+p {
+    margin-top: 20px;
+}
 
-        a {
-            color: #4775f2;
-            font-weight: 600;
-            text-decoration: none;
-        }
+a {
+    color: #4775f2;
+    font-weight: 600;
+    text-decoration: none;
+}
 
-        strong {
-            font-weight: 700;
-        }
+strong {
+    font-weight: 700;
+}
 
-        img {
-            width: 100%;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-
-        pre {
-            padding: 20px;
-            background: #212C4F;
-            overflow: hidden;
-            word-wrap: break-word;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-          
-        code {
-            color: white;
-        }
-
+img {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
 `;
 
 const Content = styled.View`
