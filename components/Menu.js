@@ -163,7 +163,7 @@ const Cover = styled.View`
 
 const Content = styled.View`
     height: ${screenHeight};
-    background: #f0f3f5;
+    background: #f2f2f2;
     padding: 50px;
 `;
 
@@ -180,7 +180,7 @@ const items = [
     },
     {
         icon: "ios-compass",
-        title: "Learn React",
+        title: "Learn XD",
         text: "start course"
     },
     {

@@ -230,9 +230,9 @@ const Modal = styled.View`
 const AnimatedModal = Animated.createAnimatedComponent(Modal);
 
 const Logo = styled.Image`
-    width: 44px;
-    height: 44px;
-    margin-top: 50px;
+    width: 60px;
+    height: 60px;
+    margin-top: 34px;
 `;
 
 const Text = styled.Text`

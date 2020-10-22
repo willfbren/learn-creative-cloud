@@ -39,7 +39,7 @@ class CoursesScreen extends React.Component {
                             </SectionScrollView>
                         </Sections>
                         <Author>
-                            <Avatar source={require("../assets/avatar.jpg")} />
+                            <Avatar source={require("../assets/avatar.png")} />
                             <Name>Taught by John Doe</Name>
                         </Author>
                     </Hero>
@@ -54,7 +54,7 @@ class CoursesScreen extends React.Component {
 export default CoursesScreen;
 
 const Container = styled.View`
-    background: #f0f3f5;
+    background: #f2f2f2;
 `;
 
 const ScrollView = styled.ScrollView`

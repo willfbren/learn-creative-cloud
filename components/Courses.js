@@ -35,7 +35,7 @@ const courses = [
         image: require("../assets/background6.jpg"),
         logo: require("../assets/logo-ps.png"),
         author: "John Doe",
-        avatar: require("../assets/avatar.jpg"),
+        avatar: require("../assets/avatar.png"),
         caption: "Transform and enhance your images"
     },
     {
@@ -44,7 +44,7 @@ const courses = [
         image: require("../assets/background5.jpg"),
         logo: require("../assets/logo-ai.png"),
         author: "John Doe",
-        avatar: require("../assets/avatar.jpg"),
+        avatar: require("../assets/avatar.png"),
         caption: "Build a beautiful icon set from scratch"
     },
     {
@@ -53,7 +53,7 @@ const courses = [
         image: require("../assets/background7.jpg"),
         logo: require("../assets/logo-id.png"),
         author: "John Doe",
-        avatar: require("../assets/avatar.jpg"),
+        avatar: require("../assets/avatar.png"),
         caption: "Layout and design for print"
     },
     {
@@ -62,7 +62,7 @@ const courses = [
         image: require("../assets/background8.jpg"),
         logo: require("../assets/logo-ae.png"),
         author: "John Doe",
-        avatar: require("../assets/avatar.jpg"),
+        avatar: require("../assets/avatar.png"),
         caption: "Bring life and excitement to your designs"
     }
 ];

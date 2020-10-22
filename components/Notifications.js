@@ -124,7 +124,7 @@ const Container = styled.View`
     width: 100%;
     height: 100%;
     z-index: 100;
-    background: #f0f3f5;
+    background: #f2f2f2;
 `;
 
 const AnimatedContainer = Animated.createAnimatedComponent(Container);

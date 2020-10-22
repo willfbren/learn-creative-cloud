@@ -193,20 +193,20 @@ const projects = [
         image: require("../assets/background10.jpg"),
         author: "John Doe",
         text:
-            "Thanks to Design+Code, I improved my design skill and learned to do animations for my app Price Tag, a top news app in China. Thanks to Design+Code, I improved my design skill and learned to do animations for my app Price Tag, a top news app in China."
+            "A design approach is a general philosophy that may or may not include a guide for specific methods. Some are to guide the overall goal of the design. Other approaches are to guide the tendencies of the designer."
     },
     {
         title: "Deep Dives into Transitions and Animations",
         image: require("../assets/background11.jpg"),
         author: "Jane Doe",
         text:
-            "Design+Code was the first resource I used when breaking into software. I went from knowing nothing about design or code to building a production ready app from scratch. "
+            "A design approach is a general philosophy that may or may not include a guide for specific methods. Some are to guide the overall goal of the design. Other approaches are to guide the tendencies of the designer. "
     },
     {
         title: "Mobile & Web Layouts from Scratch",
-        image: require("../assets/background12.jpg"),
+        image: require("../assets/background9.jpg"),
         author: "Mike Long",
         text:
-            "Recently finished the React course by @Mengto, and I 10/10 would recommend. I already rewrote my personal website in @reactjs and I'm very excited with it."
+            "A design approach is a general philosophy that may or may not include a guide for specific methods. Some are to guide the overall goal of the design. Other approaches are to guide the tendencies of the designer."
     }
 ];
