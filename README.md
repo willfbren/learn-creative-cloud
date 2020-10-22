@@ -7,6 +7,11 @@ Learn about the Adobe Suite & Creative Cloud
 
 This project was created for fun to learn and expand my skillset with React Native and to focus on popular technologie like gestures and animations while continuing to practice and grow as a developer.
 
+## Screenshots
+![preview1](https://raw.githubusercontent.com/willfbren/learn-creative-cloud/master/assets/prev1.gif)
+![preview2](https://raw.githubusercontent.com/willfbren/learn-creative-cloud/master/assets/prev2.gif)
+![preview3](https://raw.githubusercontent.com/willfbren/learn-creative-cloud/master/assets/prev3.gif)
+
 ### Built With
 
 * [React Native](https://reactnative.dev/)
