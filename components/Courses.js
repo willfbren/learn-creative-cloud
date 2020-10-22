@@ -32,7 +32,7 @@ const courses = [
     {
         title: "Image Transformation in Photoshop",
         subtitle: "10 sections",
-        image: require("../assets/background13.jpg"),
+        image: require("../assets/background6.jpg"),
         logo: require("../assets/logo-ps.png"),
         author: "John Doe",
         avatar: require("../assets/avatar.jpg"),
@@ -41,7 +41,7 @@ const courses = [
     {
         title: "Vector Icons in Illustrator",
         subtitle: "12 sections",
-        image: require("../assets/background14.jpg"),
+        image: require("../assets/background5.jpg"),
         logo: require("../assets/logo-ai.png"),
         author: "John Doe",
         avatar: require("../assets/avatar.jpg"),
@@ -50,7 +50,7 @@ const courses = [
     {
         title: "Editorial Design with InDesign",
         subtitle: "10 sections",
-        image: require("../assets/background15.jpg"),
+        image: require("../assets/background7.jpg"),
         logo: require("../assets/logo-id.png"),
         author: "John Doe",
         avatar: require("../assets/avatar.jpg"),
@@ -59,7 +59,7 @@ const courses = [
     {
         title: "Animations with After Effects",
         subtitle: "10 sections",
-        image: require("../assets/background16.jpg"),
+        image: require("../assets/background8.jpg"),
         logo: require("../assets/logo-ae.png"),
         author: "John Doe",
         avatar: require("../assets/avatar.jpg"),

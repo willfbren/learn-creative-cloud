@@ -15,7 +15,7 @@ class CoursesScreen extends React.Component {
             <Container>
                 <ScrollView>
                     <Hero>
-                        <Background source={require("../assets/background5.jpg")} />
+                        <Background source={require("../assets/background6.jpg")} />
                         <LinearGradient
                             colors={["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.5)"]}
                             style={{ position: "absolute", width: screenWidth, height: 460 }}
@@ -141,26 +141,26 @@ const sections = [
     {
         title: "Add and Edit Artboards",
         progress: 0.2,
-        image: require("../assets/background9.jpg")
+        image: require("../assets/background7.jpg")
     },
     {
         title: "Create Interactive Prototypes",
         progress: 0.3,
-        image: require("../assets/background9.jpg")
+        image: require("../assets/background7.jpg")
     },
     {
         title: "Creating UI Kits",
         progress: 0.9,
-        image: require("../assets/background9.jpg")
+        image: require("../assets/background7.jpg")
     },
     {
         title: "Share Prototypes for Review",
         progress: 0.5,
-        image: require("../assets/background9.jpg")
+        image: require("../assets/background7.jpg")
     },
     {
         title: "Exporting Assets for Developers",
         progress: 0.1,
-        image: require("../assets/background9.jpg")
+        image: require("../assets/background7.jpg")
     }
 ];
