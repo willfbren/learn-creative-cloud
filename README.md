@@ -48,6 +48,6 @@ expo start
 
 William Brennan - [LinkedIn](https://www.linkedin.com/in/willfbren/) 
 
-Project Link: [https://github.com/willfbren/learn-creative-cloud](hhttps://github.com/willfbren/learn-creative-cloud)
+Project Link: [https://github.com/willfbren/learn-creative-cloud](https://github.com/willfbren/learn-creative-cloud)
 
 > Disclaimer: All materials from Adobe are for educational purposes. 
