@@ -5,7 +5,7 @@ Learn about the Adobe Suite & Creative Cloud
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project was created for fun to learn and expand my skillset with React Native and to focus on popular technologie like gestures and animations while continuing to practice and grow as a developer.
+This project was created for fun to learn and expand my skillset with React Native and to focus on popular technologies like gestures and animations while continuing to practice and grow as a developer.
 > [YouTube Demo](https://youtu.be/2CUhxqWTcE0)
 
 ## Screenshots
